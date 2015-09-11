@@ -1,0 +1,13 @@
+<div id = "registration_new_form">
+	<%= form_for @user_input do |f| %>
+		<%= f.label("User Name") %>
+			<br/>
+				<%= f.text_field :user_name %>
+			<br/>
+		<%= f.label("Password") %>
+			<br/>
+				<%= f.text_field :user_password %>
+			<br/>
+		<%= f.submit("Register") %>		
+	<%end%>
+</div>

@@ -1,0 +1,21 @@
+<div id = "registration_new_form">
+	<%= form_for @user_input do |f| %>
+		<br/>
+		<%if flash[:error]%>
+			<p class="error"><%=flash[:error]%></p>
+		<%end%>	
+		<%= f.label("User Name") %>
+			<br/>
+				<%= f.text_field :user_name %>
+			<br/>
+		<%= f.label("Password") %>
+			<br/>
+				<%= f.text_field :user_password %>
+			<br/>
+		<%= f.label("Email") %>
+			<br/>
+				<%= f.text_field :user_email %>
+			<br/><br/>
+		<%= f.submit("Register") %>		
+	<%end%>
+</div>

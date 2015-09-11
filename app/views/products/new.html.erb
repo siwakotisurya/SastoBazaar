@@ -1,0 +1,30 @@
+<section id="navbar">
+		<nav>
+			<ul>
+				<li>
+					<%= link_to("Add New Product", :action=>"new")%>
+				</li>
+				<li>
+					<a href="#">Logout</a>
+				</li>
+			</ul>
+		</nav>
+		<div id ="product_form">
+			<div id ="message">	
+				<% if flash[:message] %>
+					<p><%= flash[:message]%></p>
+					<hr><br>
+				<%end%>
+			</div>	
+			<%= form_for :input_product, url:{:action => "create"} do |f| %>
+				<%=f.label("ProductName")%>
+				<br><br>
+				<%=f.text_field :product_name%>
+				<br><br>
+				<%=f.label("ProductDescription")%>
+				<br><br>
+				<%=f.text_field :product_description%>
+				<br><br>
+			<%= f.submit("Save")%>
+	<% end %>
+</section>

@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+	<head>	
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" initial-scale="1.0" />
+		<title>SastoBazaar.com</title>
+		<%= stylesheet_link_tag media: "all" "style.css"%>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+ 		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<header id="head_up">
+			<h1>SastoBazaar.com</h1>
+			<nav id="nav_bar">
+				<ul>
+					<li>
+						<p>Call Us For Help: 977-9843207512</p>
+					</li>
+					<li>
+						<%= link_to("Register", :controller => "registrations", :action => "new")%>
+					</li>
+					<li>
+						<%= link_to("Login", :controller => "logins", :action => "index") %>
+					</li>
+					<li>
+						<a href="#">Help And Support |</a>
+					</li>
+					<li>
+						<a href="#">Contact Us |</a>
+					</li>
+				</ul>
+			</nav>
+		</header>

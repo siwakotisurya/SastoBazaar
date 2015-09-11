@@ -1,0 +1,60 @@
+	<section>
+			<div class="search_bar">
+				<input type="text" name="search" class="search_box" placeholder="Enter Keyword To search Eg: asus laptop" required />
+				<input type="submit" value="Search" name="search">			
+			</div>
+			<div class="quick_links">
+				<a href="#">Mobile</a>
+				<a href="#">Laptops</a>
+				<a href="#">Motorcycles</a>
+				<a href="#">Bags</a>
+				<a href="#">Dogs</a>
+				<a href="#">Books</a>
+			</div>
+		</section>
+		<section>
+			<header>
+				<div id="navbar_center_1">
+					<h2>Categories</h2>
+				</div>
+				<div id="navbar_center_2">
+				</div>
+			</header>
+		</section>
+		<section>
+			<div id="categories_nav">
+				<nav>
+					<ul>
+						<li>
+							<a href="#">Mobiles and Acesscories</a>
+						</li>
+						<li>
+							<a href="#">Computers And Perpherals</a>
+						</li>
+						<li>
+							<a href="#">Digital Acessories</a>
+						</li>
+						<li>
+							<a href="#">Furniture And Home Appliances</a>
+						</li>
+						<li>
+							<a href="#">Automobiles Anc Acessories</a>
+						</li>
+						<li>
+							<a href="#">Pets And Pets Care</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+	<section id = "container">
+		<%@products.each do |all|%>
+		<p> Product Name:
+		<%=link_to(all.product_name)%>
+		</p>
+		<%=%>
+		<br>
+		<%end%>
+	</section>	
+
+
